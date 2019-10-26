@@ -1,0 +1,21 @@
+{
+  "name": "kitty_web_portal",
+  "version": "1.0.0",
+  "description": "Super secure server",
+  "author": "Alena",
+  "license": "ISC",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server": "^2.9.7",
+    "apollo-server-express": "^2.9.7",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

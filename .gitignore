@@ -1,0 +1,18 @@
+# local config
+/config/config-local.js
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+*.orig
+
+npm-debug.log*
+
+# vscode
+.vscode/chrome/*
+.vscode/settings.json

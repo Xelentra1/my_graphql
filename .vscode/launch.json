@@ -1,0 +1,15 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Backend",
+            "program": "${workspaceRoot}/index.js",
+            "cwd": "${workspaceRoot}",
+            //"runtimeVersion": "12.6.0"
+            // "envFile": "${workspaceFolder}/.env"
+        },
+    ]
+  }
+  
