@@ -27,6 +27,8 @@ const typeDefs = gql`
 
     type Query {
         mew: User @auth
+        pawColorChecker(color: String): String @auth @admin
+        purr: String @auth @admin
         users: [User] @auth @admin
     }
 
@@ -66,6 +68,16 @@ const logout = (root, args, { req, res }) => {
     return true;
 };
 
+const pawColorChecker = (root, { color }, { req, res }) => {
+    if (color == 'BLACK')
+        return "flag_part_3";
+    else return "nope"
+};
+
+const purr = (root, args, { req, res }) => {
+    return "flag_part_2";
+};
+
 const updateUser = (root, { user, email }, { req }) => {
     const isAdmin = req.session && req.session.role && req.session.role == "admin";
     if (!isAdmin && req.session.email !== email) {
@@ -81,6 +93,8 @@ const updateUser = (root, { user, email }, { req }) => {
 const resolvers = {
     Query: {
         mew,
+        purr,
+        pawColorChecker,
         users: () => users
     },
     Mutation: {

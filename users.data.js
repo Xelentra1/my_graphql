@@ -14,7 +14,7 @@ const users = [
     {
         name: 'Billy',
         role: 'admin',
-        password: 'passwordorino',
+        password: 'flag_part_1',
         email: 'billyzeadmin@ing.com'
     },
 ];
