@@ -120,6 +120,7 @@ Server.use(cookieParser());
 Server.use(isAuth);
 
 const apollo = new ApolloServer({
+    debug: false,
     typeDefs,
     resolvers,
     schemaDirectives,
