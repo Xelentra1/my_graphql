@@ -26,6 +26,7 @@ const typeDefs = gql`
     }
 
     type Query {
+        mew: User @auth
         users: [User] @auth @admin
     }
 
@@ -55,6 +56,10 @@ const login = (root, args, { res }) => {
     return user;
 };
 
+const mew = (root, args, { req, res }) => {
+    return findOne(req.session.email);
+};
+
 const logout = (root, args, { req, res }) => {
     res.clearCookie('access-token');
     res.clearCookie('refresh-token');
@@ -75,6 +80,7 @@ const updateUser = (root, { user, email }, { req }) => {
   
 const resolvers = {
     Query: {
+        mew,
         users: () => users
     },
     Mutation: {
